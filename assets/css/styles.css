@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hamburger {
+    cursor: pointer;
+    margin: 0 200px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #333;
+}
+.menu {
+    display: none;
+}
+.menu ul {
+    position: absolute;
+    top: 60px;
+    border-radius: 20px 0 0 20px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ddd;
+    width: 200px;
+    height: 80vh;
+    opacity: 0.9;
+}
+.menu.active {
+    display: block; 
+}
+
+.bg {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    background-position: calc(20px);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -2;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    margin: 0 20px;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    border-radius: 30px;
+    transition: all .5s ease-in-out;
+}
+
+.logo:hover {
+    background-color: rgb(0, 68, 255);
+    box-shadow: rgba(0, 68, 255, 0.4) 5px 5px, rgba(0, 68, 255, 0.3) 10px 10px, rgba(0, 68, 255, 0.2) 15px 15px, rgba(0, 68, 255, 0.1) 20px 20px;
+    transform: translateY(-10px);
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    margin-left: 20px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: all .4s ease-in-out;
+    display: inline-block;
+}
+
+ul li a:hover {
+    color: crimson;
+    transform: translateY(-10px);
+}
+
+.search {
+    position: absolute;
+    bottom: 20px;
+    right: 400px;
+}
+
+.search i {
+    font-size: 20px;
+    margin: 0 10px;
+    transform: translateY(35px);
+}
+
+.search .box-input {
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: all .8s ease;
+}
+
+.search input {
+    margin: 0 40px;
+    height: 40px;
+    width: 0px;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: all .6s ease;
+}
+
+.search:hover .box-input {
+    width: 240px;
+}
+
+.search:hover input {
+    width: 200px;
+}
+
+.icon {
+    display: flex;
+    margin-left: 600px;
+    gap: 40px;
+}
+
+.icon i {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    transition: all .3s ease;
+}
+
+.icon i:hover {
+    color: #fff;
+    background-color: #3f3f3f;
+}
+
+.hero-section {
+    margin: 160px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.title {
+    margin-right: 50px;
+}
+
+.title2 {
+    margin-left: 200px;
+}
+
+.cta-btn {
+    background-color: #333;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    margin: 90px 0;
+}
+
+.cta-btn:hover {
+    background-color: #006eff;
+}
+
+.cta-btn a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    z-index: -1;
+}
+
+.logo {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+}
